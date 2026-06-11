@@ -10,7 +10,7 @@ from __future__ import annotations
 # (from, to, label)
 EDGES = [
     ("park", "volkov", "calls him Kostya, respects him"),
-    ("park", "okafor", '"Doctor" — formal'),
+    ("park", "okafor", "Doctor — formal"),
     ("park", "mira", "calls her Mira (Mira appreciates it)"),
     ("park", "hua", "Lin — informal"),
     ("volkov", "mira", "complains about her, depends on her"),
@@ -21,8 +21,13 @@ EDGES = [
 ]
 
 
+def _safe_label(label: str) -> str:
+    # Mermaid pipe-syntax labels can't contain unescaped pipes or quotes.
+    return label.replace("|", "/").replace('"', "").replace("'", "")
+
+
 def to_mermaid() -> str:
     lines = ["graph LR"]
     for a, b, label in EDGES:
-        lines.append(f'  {a} -- "{label}" --> {b}')
+        lines.append(f"  {a} -->|{_safe_label(label)}| {b}")
     return "\n".join(lines)

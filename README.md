@@ -140,14 +140,14 @@ respond to the same prompt and watch them disagree.
 
 ```mermaid
 graph LR
-  park -- "calls him Kostya" --> volkov
-  park -- '"Doctor"' --> okafor
-  park -- "calls her Mira" --> mira
-  volkov -- "complains about her" --> mira
-  volkov -- "mentors at chess" --> hua
-  okafor -- "asks her to speculate" --> mira
-  hua -- "quietly worried" --> okafor
-  hua -- "shares concerns" --> mira
+  park -->|calls him Kostya| volkov
+  park -->|Doctor| okafor
+  park -->|calls her Mira| mira
+  volkov -->|complains about her| mira
+  volkov -->|mentors at chess| hua
+  okafor -->|asks her to speculate| mira
+  hua -->|quietly worried| okafor
+  hua -->|shares concerns| mira
 ```
 
 ## Adding a character (YAML)
