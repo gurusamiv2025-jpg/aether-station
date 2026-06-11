@@ -8,7 +8,7 @@
 > A Creative Apps submission for **Agents League @ AISF 2026**.
 > Track: 🎨 Creative Apps · IQ: 🧠 Foundry IQ
 
-> **🌐 Live demo:** https://aether-station-lttgtzagkyffhfgqzhyywx.streamlit.app/ — see [`DEPLOY.md`](DEPLOY.md) for four hosting paths (Streamlit Community Cloud, Hugging Face Spaces, Render, Azure Container Apps)._
+> **🌐 Live demo:** https://aether-station-lttgtzagkyffhfgqzhyywx.streamlit.app/
 
 Talk to the crew of an orbital research station. Each character has their own
 voice, expertise, and relationships — and every answer is **grounded in the
