@@ -1,0 +1,38 @@
+[project]
+name = "aether-station"
+version = "1.0.0"
+description = "Multi-character chatbot grounded in a station lore bible via Microsoft Foundry IQ. Agents League @ AISF 2026 — Creative Apps track."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "V GURUSAMI" }]
+keywords = ["chatbot", "agents", "foundry-iq", "microsoft", "hackathon", "streamlit", "mcp"]
+
+dependencies = [
+    "streamlit>=1.32",
+    "python-dotenv>=1.0",
+    "scikit-learn>=1.4",
+    "numpy>=1.26",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+azure = [
+    "azure-identity>=1.16",
+    "azure-ai-projects>=1.0.0b3",
+    "openai>=1.30",
+]
+mcp = ["mcp>=1.0"]
+api = ["fastapi>=0.110", "uvicorn[standard]>=0.27", "httpx>=0.27"]
+dev = ["pytest>=8.0", "fastapi>=0.110", "httpx>=0.27"]
+
+[project.scripts]
+aether-station = "cli:main"
+
+[project.urls]
+"Hackathon" = "https://aka.ms/agentsleague"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q"

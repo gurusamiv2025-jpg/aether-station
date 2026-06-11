@@ -1,0 +1,33 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # Install only the deps actually needed by the tests; skip the
+          # optional Azure / MCP packages to keep CI fast.
+          pip install streamlit python-dotenv scikit-learn numpy pyyaml pytest
+      - name: Compile check
+        run: |
+          python -m compileall -q . tests
+      - name: Run pytest
+        run: |
+          pytest -q

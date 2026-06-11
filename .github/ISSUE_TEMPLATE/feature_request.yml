@@ -1,0 +1,31 @@
+name: Feature request
+description: Suggest an improvement to Aether Station
+title: "[feat] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the gap or pain point, not the implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed approach
+      description: Optional. If you've thought about how to build it, sketch it here.
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - new character
+        - new lore
+        - new scenario
+        - retrieval / Foundry IQ
+        - UI / Streamlit
+        - CLI / MCP server
+        - safety / refusal
+        - docs / tests
+        - other

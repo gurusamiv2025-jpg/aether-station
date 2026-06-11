@@ -1,0 +1,13 @@
+streamlit>=1.32
+python-dotenv>=1.0
+scikit-learn>=1.4
+numpy>=1.26
+pyyaml>=6.0
+# MCP server for GitHub Copilot integration (optional — only needed if running mcp_server.py)
+mcp>=1.0
+# Azure (optional — only needed for live Foundry IQ + Azure OpenAI)
+azure-identity>=1.16
+azure-ai-projects>=1.0.0b3
+openai>=1.30
+# Dev / tests (optional — install with `pip install -r requirements.txt[dev]` if you split)
+pytest>=8.0

@@ -1,0 +1,44 @@
+name: Bug report
+description: Report a problem with Aether Station
+title: "[bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. Before opening this, please run
+        `python cli.py doctor` — if anything reports FAIL, the output
+        from that command is the most useful thing you can paste below.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Briefly describe what you expected vs. what actually happened.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. `git clone ...`
+        2. `make install`
+        3. `python cli.py ask park "..."`
+        4. See error: ...
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Output of `python cli.py doctor`
+      render: shell
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.12.1"
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: "Ubuntu 24.04 / macOS 14 / Windows 11"

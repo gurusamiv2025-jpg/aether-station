@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: aether-station
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: RETRIEVER_BACKEND
+        value: bm25
+      - key: AZURE_OPENAI_ENDPOINT
+        sync: false
+      - key: AZURE_OPENAI_API_KEY
+        sync: false
+      - key: AZURE_OPENAI_DEPLOYMENT
+        sync: false
+      - key: FOUNDRY_PROJECT_ENDPOINT
+        sync: false
+      - key: FOUNDRY_AGENT_ID
+        sync: false
