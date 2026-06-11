@@ -8,7 +8,7 @@
 > A Creative Apps submission for **Agents League @ AISF 2026**.
 > Track: 🎨 Creative Apps · IQ: 🧠 Foundry IQ
 
-> **🌐 Live demo:** _set the URL here after deploying — see [`DEPLOY.md`](DEPLOY.md) for four hosting paths (Streamlit Community Cloud, Hugging Face Spaces, Render, Azure Container Apps)._
+> **🌐 Live demo:** https://aether-station-lttgtzagkyffhfgqzhyywx.streamlit.app/ — see [`DEPLOY.md`](DEPLOY.md) for four hosting paths (Streamlit Community Cloud, Hugging Face Spaces, Render, Azure Container Apps)._
 
 Talk to the crew of an orbital research station. Each character has their own
 voice, expertise, and relationships — and every answer is **grounded in the
@@ -427,4 +427,3 @@ The suite covers retrieval relevance, reasoning trace shape, safety
 refusals (jailbreak / harm / real-world deflection), shared-log behavior,
 scenario integrity, and per-character mock-LLM voicing.
 
-## Track requi
