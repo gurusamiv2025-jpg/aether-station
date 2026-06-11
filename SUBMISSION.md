@@ -100,7 +100,7 @@ See [`DEPLOY.md`](DEPLOY.md) for four hosting paths:
 - Render (free tier, Docker)
 - Azure Container Apps (on-brand for the hackathon)
 
-**Live demo URL:** _set this after deploying_
+**Live demo URL:** https://aether-station-lttgtzagkyffhfgqzhyywx.streamlit.app/
 
 ## Repository hygiene
 
